@@ -20,3 +20,25 @@
   margin-inline: auto;
   width: min(100% - 30px, 1080px);
 }
+
+.flex {
+  display: flex;
+}
+
+/* main */
+main input {
+  border: 1px solid #000;
+  border-radius: 30px;
+  margin-top: 20px;
+  font-size: 0px;
+  padding: 15px 10px;
+}
+
+main input + input {
+  margin-left: 20px;
+}
+
+main input[type=text], main input[type=button] {
+  font-size: 20px;
+  text-align: center;
+}
