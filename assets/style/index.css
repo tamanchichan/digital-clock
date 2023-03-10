@@ -1,11 +1,19 @@
 @import url('./reset.css');
 
 /* class */
+.alarm {
+  font-size: 25px;
+}
+
 .center {
   display: grid;
   height: 100vh;
   place-content: center;
   place-items: center;
+}
+
+.clock {
+  font-size: 120px;
 }
 
 .container {
