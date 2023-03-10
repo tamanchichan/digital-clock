@@ -2,8 +2,8 @@
 
 const digitalClock = document.querySelector('#digitalClock');
 
-setInterval(() => {
-  return digitalClock.innerText = new Date().toLocaleTimeString();
+let clock = setInterval(() => {
+  digitalClock.innerText = new Date().toLocaleTimeString();
 }, 1000);
 
 const alarm = document.querySelector('#alarm');
@@ -29,3 +29,6 @@ button.addEventListener('click', () => {
     output.innerText = 'Please follow the example below: 00:00';
   }
 });
+
+const alarmSound = new Audio('./assets/audio/alarm.mp3');
+alarmSound.type = 'audio/mp3';
