@@ -36,11 +36,17 @@ body {
   display: flex;
 }
 
+.output {
+  font-size: 20px;
+  height: 30px;
+  margin-top: 20px;
+}
+
 /* main */
 main input {
   border-radius: 30px;
-  margin-top: 20px;
   font-size: 0px;
+  margin-top: 20px;
   padding: 15px 10px;
 }
 
