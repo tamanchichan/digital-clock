@@ -1,5 +1,16 @@
 @import url('./reset.css');
 
+:root {
+  --body-bg-color: #f2f4f6;
+  --input-button-bg-color: #01e98a;
+  --input-text-bg-color: #d0d2d4;
+}
+
+/* HTML */
+body {
+  background-color: var(--body-bg-color);
+}
+
 /* class */
 .alarm {
   font-size: 25px;
@@ -27,7 +38,6 @@
 
 /* main */
 main input {
-  border: 1px solid #000;
   border-radius: 30px;
   margin-top: 20px;
   font-size: 0px;
@@ -36,6 +46,14 @@ main input {
 
 main input + input {
   margin-left: 20px;
+}
+
+main input[type=text] {
+  background-color: var(--input-text-bg-color);
+}
+
+main input[type=button] {
+  background-color: var(--input-button-bg-color);
 }
 
 main input[type=text], main input[type=button] {
