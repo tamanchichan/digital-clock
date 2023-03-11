@@ -23,11 +23,12 @@ function clock() {
   
   if (alarm.innerText === `${hours}:${minutes}`) {
     playAlarm();
+    alarm.style.color = '#f00';
     // NOT WORKING! IT IS GLITCHING
     // setTimeout(
     //   () => {
     //     stopAlarm();
-    //   }, 5000
+    //   }, 10000
     // )
   }
   
@@ -55,6 +56,7 @@ function stopAlarm() {
 button.addEventListener('click', () => {
   if (hasColon()) {
     alarm.innerText = input.value;
+    input.value = '';
   } else {
     output.innerText = 'Please follow the example below: hh:mm (12:34)'
   }
