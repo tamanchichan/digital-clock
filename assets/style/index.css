@@ -49,6 +49,10 @@ body {
 }
 
 /* main */
+main .alarm p {
+  height: 30px;
+}
+
 main input {
   border-radius: 30px;
   font-size: 0px;
