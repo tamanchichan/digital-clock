@@ -15,9 +15,7 @@ body {
 /* class */
 .alarm {
   font-size: 25px;
-  height: 30px;
-  line-height: 30px;
-  margin-top: 20px;
+  text-align: center;
 }
 
 .center {
@@ -26,7 +24,6 @@ body {
   place-content: center;
   place-items: center;
 }
-
 
 .clock {
   font-size: 120px;
@@ -52,10 +49,6 @@ body {
 }
 
 /* main */
-main .alarm p {
-  margin-left: 15px;
-}
-
 main input {
   border-radius: 30px;
   font-size: 0px;
