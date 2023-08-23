@@ -21,17 +21,6 @@ function clock() {
     }, 1000
   );
   
-  if (alarm.innerText === `${hours}:${minutes}`) {
-    playAlarm();
-    alarm.style.color = '#f00';
-    // NOT WORKING! IT IS GLITCHING
-    // setTimeout(
-    //   () => {
-    //     stopAlarm();
-    //   }, 10000
-    // )
-  }
-  
   return time;
 }
 
@@ -51,12 +40,36 @@ function playAlarm() {
 
 function stopAlarm() {
   alarmSound.pause();
+  alarmSound.currentTime = 0;
 }
 
 button.addEventListener('click', () => {
   if (hasColon()) {
     alarm.innerText = input.value;
     input.value = '';
+    
+    const alarmHour = alarm.innerText.slice(0,2);
+    const alarmMinute = alarm.innerText.slice(3,5);
+    
+    const alarmTime = new Date();
+    alarmTime.setHours(alarmHour);
+    alarmTime.setMinutes(alarmMinute);
+    alarmTime.setSeconds(0);
+    alarmTime.setMilliseconds(0);
+    
+    const currentTime = new Date();
+    const timeUntilAlarm = alarmTime.getTime() - currentTime.getTime();
+
+    setTimeout(() => {
+      playAlarm();
+      alarm.style.color = '#f00';
+      
+      setTimeout(() => {
+        stopAlarm();
+        alarm.style.color = '#000';
+        alarm.innerText = '';
+      }, 10000);
+    }, timeUntilAlarm);
   } else {
     output.innerText = 'Please follow the example below: hh:mm (12:34)'
   }
