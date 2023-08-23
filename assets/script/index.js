@@ -68,7 +68,7 @@ button.addEventListener('click', () => {
         stopAlarm();
         alarm.style.color = '#000';
         alarm.innerText = '';
-      }, 5000);
+      }, 10000);
     }, timeUntilAlarm);
   } else {
     output.innerText = 'Please follow the example below: hh:mm (12:34)'
